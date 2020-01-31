@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">  
+  
+  <head>    
+    <title>Piedra Papel Tijeras</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Piedra, Papel o Tijera">
+    <meta name="description" content="Piedra, Papel o Tijera">    
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css"/>    
+
+    <script type="text/javascript" src="js/juego.js"></script>
+
+  </head>  
+
+  <body>    
+    
+    <section class="hero is-dark is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Piedra, Papel o Tijera, Largarto, Spock</h1>
+          <h2 class="subtitle">by Jose Chamorro</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIN CABECERA -->
+
+    <div class="tile is-ancestor">
+      
+      <div class="tile is-5 is-vertical is-parent">
+        <div class="tile is-child box">
+          <p class="title">Reglas</p>
+          <p><img src="img/reglas.png" width="100%"></p>
+        </div>       
+      </div>
+
+      <div class="tile is-parent">
+        <div class="tile is-child box">
+
+          <!-- INI -->
+
+          <!-- https://wikiki.github.io/form/slider/ -->
+
+          <!-- https://wikiki.github.io/form/switch/ -->
+
+          
+          <p class="title">Jugador 1</p>          
+          
+          <div class="buttons has-addons">
+            <button id="op0" class="button is-medium" onClick="usuario(0)">Piedra</button>
+            <button id="op1" class="button is-medium" onClick="usuario(1)">Papel</button>
+            <button id="op2" class="button is-medium" onClick="usuario(2)">Tijera</button>
+            <button id="op3" class="button is-medium" onClick="usuario(3)">Lagarto</button>
+            <button id="op4" class="button is-medium" onClick="usuario(4)">Spock</button>            
+          </div>
+          
+          <p id="puntosUsuario" class="subtitle">Puntos 0</p>
+          <progress id="barraUsuario" class="progress is-success" value="0" max="100">60%</progress>
+
+          <div class="buttons has-addons is-centered">
+            <button class="button is-danger" onClick="jugar()">Jugar</button> 
+            <button class="button is-dark" onClick="nuevoJuego()">Nueva partida</button>            
+          </div>
+
+          <p class="title">CPU</p>
+          
+          <div class="buttons has-addons">
+            <button id="opMaq0" class="button is-medium" disabled>Piedra</button>
+            <button id="opMaq1" class="button is-medium" disabled>Papel</button>
+            <button id="opMaq2" class="button is-medium" disabled>Tijera</button>
+            <button id="opMaq3" class="button is-medium" disabled>Lagarto</button>
+            <button id="opMaq4" class="button is-medium" disabled>Spock</button>
+          </div>
+          
+          <div>
+          	<p id="puntosMaquina" class="subtitle">Puntos 0</p>
+            <progress id="barraMaquina" class="progress is-info" value="0" max="100"></progress>
+		      </div>
+          
+          <!-- FIN -->
+
+          <div class="is-centered">          	
+            <p class="title">&nbsp;</p>
+            <p class="title is-centered" id="resultados1">&nbsp;</p>
+            <p class="subtitle" id="resultados2">&nbsp;</p>
+            <p class="title">&nbsp;</p>            
+          </div>
+    
+          <!--
+          <div class="buttons has-addons is-centered">    	    
+            <button class="button is-dark" onClick="nuevoJuego()">Nueva partida</button>            
+          </div>
+          -->
+          
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- INICIO MODAL -->
+    <div id="modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <p class="image is-4by3">
+          <img src="img/reglas.png" alt="">
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+	<!-- FIN MODAL -->
+    
+
+    <!-- INICIO FOOTER -->
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <h1><strong>IES La Senia</strong> - 2º SMX - Aplicaciones Web</h1>
+      </div>
+    </footer>
+
+
+  </body>  
+</html>
